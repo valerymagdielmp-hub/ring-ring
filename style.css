@@ -1,0 +1,96 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #1a73e8;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-task-btn:hover {
+    background-color: #155ab6;
+}
+
+/* --- Estilo de cada recordatorio (Rectángulo) --- */
+.task-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden; /* Clave para la animación */
+    transition: max-height 0.5s ease-in-out, box-shadow 0.3s; /* Animación suave */
+    max-height: 60px; /* Altura inicial del rectángulo cerrado */
+}
+
+.task-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.task-header {
+    padding: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.task-details {
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid #eee;
+}
+
+.task-details p {
+    margin-top: 0;
+}
+
+/* --- Estilo cuando el recordatorio está expandido --- */
+.task-item.expanded {
+    max-height: 200px; /* Altura máxima al expandirse */
+}
