@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Recordatorios del Día</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Iconos para los botones de editar y borrar (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
@@ -13,31 +12,25 @@
     <div class="app-container">
         <h1>Mis Recordatorios ✅</h1>
 
-        <!-- Campo para añadir nuevas tareas -->
         <div class="input-container">
             <input type="text" id="task-input" placeholder="Escribe un nuevo recordatorio...">
             <button id="add-task-btn">Añadir</button>
         </div>
 
-        <!-- Barra de búsqueda con ícono de lupa -->
         <div class="search-container">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" id="search-input" placeholder="Buscar recordatorios...">
         </div>
 
-        <!-- Contenedor donde se mostrará la lista de tareas desde Firebase -->
         <div id="task-list" class="task-list-container">
-            <!-- Los recordatorios aparecerán aquí dinámicamente -->
-        </div>
+            </div>
     </div>
 
-    <!-- Scripts de Firebase (¡MUY IMPORTANTE!) -->
-    <!-- Estos le dan a tu página el poder de conectarse a Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     
-    <!-- Tu script personal que contiene toda la lógica -->
     <script src="app.js"></script>
 
 </body>
 </html>
+
