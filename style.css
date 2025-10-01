@@ -1,3 +1,4 @@
+/* Estilos generales del cuerpo de la página */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #f0f2f5;
@@ -10,6 +11,7 @@ body {
     margin: 0;
 }
 
+/* Contenedor principal de la aplicación */
 .app-container {
     width: 100%;
     max-width: 600px;
@@ -19,17 +21,20 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Título principal */
 h1 {
     text-align: center;
     color: #1a73e8;
 }
 
+/* Contenedor del campo de texto y botón de añadir */
 .input-container {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
 }
 
+/* Campo de texto para nuevos recordatorios */
 #task-input {
     flex-grow: 1;
     padding: 10px 15px;
@@ -44,6 +49,7 @@ h1 {
     border-color: #1a73e8;
 }
 
+/* Botón "Añadir" */
 #add-task-btn {
     padding: 10px 20px;
     background-color: #1a73e8;
@@ -59,7 +65,7 @@ h1 {
     background-color: #155ab6;
 }
 
-/* --- Estilos para la barra de búsqueda --- */
+/* Estilos para la barra de búsqueda */
 .search-container {
     position: relative;
     margin-bottom: 20px;
@@ -72,7 +78,7 @@ h1 {
 }
 #search-input {
     width: 100%;
-    padding: 10px 15px 10px 40px; /* Espacio para el icono */
+    padding: 10px 15px 10px 40px; /* Espacio para el ícono de la lupa */
     border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
@@ -86,9 +92,9 @@ h1 {
     border-radius: 8px;
     margin-bottom: 10px;
     cursor: pointer;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, box-shadow 0.3s, opacity 0.3s, transform 0.3s;
-    max-height: 60px;
+    overflow: hidden; /* Clave para la animación de expansión */
+    transition: all 0.5s ease-in-out;
+    max-height: 60px; /* Altura inicial del rectángulo cerrado */
 }
 
 .task-item:hover {
@@ -109,6 +115,7 @@ h1 {
     border-top: 1px solid #eee;
 }
 
+/* Botones de acciones (editar, borrar) */
 .task-actions button {
     background: none;
     border: none;
@@ -121,17 +128,18 @@ h1 {
 .task-actions .edit-btn:hover { color: #1a73e8; }
 .task-actions .delete-btn:hover { color: #e81a1a; }
 
-/* --- Estilo cuando el recordatorio está expandido --- */
+/* Estilo cuando el recordatorio está expandido */
 .task-item.expanded {
-    max-height: 200px;
+    max-height: 200px; /* Altura máxima al expandirse */
 }
 
-/* Clase para ocultar tareas en la búsqueda */
+/* Clase para ocultar tareas durante la búsqueda */
 .task-item.hide {
     opacity: 0;
     transform: scale(0.9);
-    max-height: 0 !important; /* Importante para que desaparezca */
+    max-height: 0 !important; /* Importante para que desaparezca visualmente */
     margin-bottom: 0;
     padding: 0;
     border: none;
 }
+
