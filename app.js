@@ -1,15 +1,13 @@
-// --- PASO 1: Configuración de Firebase (Tus claves ya están aquí) ---
+// --- PASO 1: Configuración de Firebase (Tus claves y URL ya están aquí) ---
 const firebaseConfig = {
   apiKey: "AIzaSyB7NH27RunpBlUDSBcpSi6nT_eumLw1TAw",
   authDomain: "ring-ring-97dc2.firebaseapp.com",
   projectId: "ring-ring-97dc2",
-  storageBucket: "ring-ring-97dc2.firebasestorage.app", // Corregido de .app a .com
+  storageBucket: "ring-ring-97dc2.appspot.com",
   messagingSenderId: "906912446745",
   appId: "1:906912446745:web:28db2dfde2916ac89d2d88",
   measurementId: "G-SB0PP2X1EP",
-  // ¡IMPORTANTE! Ve a tu consola de Firebase -> Realtime Database
-  // y copia la URL que aparece arriba. Pégala aquí.
-  // Se verá así: "https://ring-ring-97dc2-default-rtdb.firebaseio.com"
+  // ¡URL confirmada y añadida desde tu captura de pantalla!
   databaseURL: "https://ring-ring-97dc2-default-rtdb.firebaseio.com"
 };
 
@@ -158,3 +156,4 @@ tasksRef.on('child_changed', (snapshot) => {
         changedTaskElement.querySelector('.task-title').textContent = taskData.text;
     }
 });
+
