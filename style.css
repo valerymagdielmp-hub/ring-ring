@@ -59,6 +59,26 @@ h1 {
     background-color: #155ab6;
 }
 
+/* --- Estilos para la barra de búsqueda --- */
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+.search-container .fa-magnifying-glass {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    color: #aaa;
+}
+#search-input {
+    width: 100%;
+    padding: 10px 15px 10px 40px; /* Espacio para el icono */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
 /* --- Estilo de cada recordatorio (Rectángulo) --- */
 .task-item {
     background-color: #f9f9f9;
@@ -66,9 +86,9 @@ h1 {
     border-radius: 8px;
     margin-bottom: 10px;
     cursor: pointer;
-    overflow: hidden; /* Clave para la animación */
-    transition: max-height 0.5s ease-in-out, box-shadow 0.3s; /* Animación suave */
-    max-height: 60px; /* Altura inicial del rectángulo cerrado */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, box-shadow 0.3s, opacity 0.3s, transform 0.3s;
+    max-height: 60px;
 }
 
 .task-item:hover {
@@ -76,6 +96,9 @@ h1 {
 }
 
 .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     font-weight: 500;
     font-size: 18px;
@@ -86,11 +109,29 @@ h1 {
     border-top: 1px solid #eee;
 }
 
-.task-details p {
-    margin-top: 0;
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+    margin-left: 10px;
+    transition: color 0.3s;
 }
+.task-actions .edit-btn:hover { color: #1a73e8; }
+.task-actions .delete-btn:hover { color: #e81a1a; }
 
 /* --- Estilo cuando el recordatorio está expandido --- */
 .task-item.expanded {
-    max-height: 200px; /* Altura máxima al expandirse */
+    max-height: 200px;
+}
+
+/* Clase para ocultar tareas en la búsqueda */
+.task-item.hide {
+    opacity: 0;
+    transform: scale(0.9);
+    max-height: 0 !important; /* Importante para que desaparezca */
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
 }
